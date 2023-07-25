@@ -3,9 +3,11 @@ node{
     
     stage('1 Clone the code'){
         git branch: 'main', url: 'https://github.com/Jaydaleme/maven-app-pub'
-        //git 'https://github.com/Jaydaleme/maven-app-pub'
-        //sh 'git clone https://github.com/Jaydaleme/maven-app-pub'
-        //git url: 'https://github.com/Jaydaleme/maven-app-pub.git'
+        // If for a private repo, pass credentials alongside it, see next line 
+        // git branch: 'dev', credentialsId: 'github-credentials', url: 'https://github.com/Jaydaleme/maven-app'
+        //git 'https://github.com/Jaydaleme/maven-app-pub' ==== attempts
+        //sh 'git clone https://github.com/Jaydaleme/maven-app-pub' ==== attempts
+        //git url: 'https://github.com/Jaydaleme/maven-app-pub.git' ==== attempts 
     }
     
     stage('2 Test and Build'){
