@@ -2,7 +2,9 @@ node{
     def mavenHome = tool name: 'maven3.9.3'
     
     stage('1 Clone the code'){
-        git branch: 'main', url: 'https://github.com/Jaydaleme/maven-app-pub'
+        git branch: 'main', url: 'https://github.com/Jaydaleme/maven-app-pub' 
+        // If for a private repo, pass credentials alongside it, see next line 
+        // git branch: 'dev', credentialsId: 'github-credentials', url: 'https://github.com/Jaydaleme/maven-app'
         //git 'https://github.com/Jaydaleme/maven-app-pub'
         //sh 'git clone https://github.com/Jaydaleme/maven-app-pub'
         //git url: 'https://github.com/Jaydaleme/maven-app-pub.git'
